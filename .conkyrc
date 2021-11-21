@@ -289,6 +289,6 @@ ${voffset 10}${font RadioSpace:size=32}${alignc}${color}${battery_percent BAT0}%
 ##################################
 ##           TIME               ##
 ##################################
-${voffset 0}${font}${color1}TIME${offset 8}${voffset -2}${hr 1}${font}
+${voffset -20}${font}${color1}TIME${offset 8}${voffset -2}${hr 1}${font}
 ${voffset 10}${font RadioSpace:size=32}${alignc}${color}${time %H:%M}
 ]]
