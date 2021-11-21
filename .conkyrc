@@ -1,0 +1,294 @@
+conky.config = {
+
+    --####
+    --## Use XFT? Required to Force UTF8 (see below)
+    --#
+    use_xft = true,
+    font = 'DejaVu Sans:size=8',
+    xftalpha = 0.1,
+
+    --####
+    --## Force UTF8? Requires XFT (see above)
+    --## Displays degree symbol, instead of Â°, etc.
+    --#
+    override_utf8_locale = true,
+
+    --####
+    --## This buffer is used for single lines, text, output from $exec, and other variables.
+    --## Increasing the 'text_buffer_size' (too high) will drastically reduce Conky's performance.
+    --## Decreasing the buffer size (too low) will truncate content and cause strange display output.
+    --## Standard text buffer size is 256 bytes (cannot be less). Adjust YOUR buffer wisely!
+    --## Tips n' Tricks from dk75:"You don't need to create a 12KiB buffer for every Conky config line."
+    --#
+    text_buffer_size = 4352,
+
+    --####
+    --## Maximum number of special things, e.g. fonts, offsets, aligns, etc. (default is 512)
+    --## Tips n' Tricks from: sparker256 (Thanks, Bill!)
+    --## (Currently not working in Conky 1.10 - Disabled)
+    --#
+    --max_specials 600,
+    
+    --####
+    --## Maximum size of user text buffer, e.g. for layout below TEXT line (default is 16384)
+    --## Increase this, as needed, to accommodate large config files with a great deal of text.
+    --## Tips n' Tricks from: Cavsfan
+    --#
+    max_user_text = 32768,
+
+    --####
+    --## Daemonize Conky, aka 'fork to background'.
+    --#
+    background = false,
+
+    --####
+    --## Update interval in seconds.
+    --#
+    update_interval = 2.0,
+
+    --####
+    --## The number of times Conky will update before quitting.
+    --## Zero makes Conky run forever.
+    --#
+    total_run_times = 0,
+
+    --####
+    --## Create 'own_window' type. Makes Conky behave like other panels.
+    --#
+    own_window = true,
+    own_window_transparent = false,
+    own_window_class = 'Conky',
+    own_window_type = 'desktop',
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    --####
+    --## Some distros require the following lines for TRUE transparency.
+    --## BOTH of these lines need to be Commented/Uncommented in tandem.
+    --## (Currently not working in Conky 1.10 - Disabled)
+    --#
+    own_window_argb_visual = true,
+    own_window_argb_value = 0,
+    --####
+    --## Don't want TRUE transparency? (icons look janky on certain walls)
+    --## Comment BOTH of the lines above and Uncomment the line below.
+    --## (Currently not working in Conky 1.10 - Disabled)
+    --#
+    --# own_window_argb_visual = false,
+
+    --####
+    --## Force images to redraw when they change.
+    --#
+    imlib_cache_size = 1,
+
+    --####
+    --## Use double buffering? Reduces flicker.
+    --#
+    double_buffer = true,
+
+    --####
+    --## Draw shades?
+    --#
+    draw_shades = false,
+    default_shade_color = '333300',
+    --# default_shade_color = '3c3c3c',
+    --# default_shade_color = '494949',
+    --# default_shade_color = '565656',
+    --# default_shade_color = '626262',
+
+    --####
+    --## Draw outlines?
+    --#
+    draw_outline = false,
+    
+    --####
+    --## Draw borders around text?
+    --#
+    draw_borders = false,
+    
+    --####
+    --## Draw borders around graphs?
+    --#
+    draw_graph_borders = true,
+
+    --####
+    --## Print text to stdout?
+    --## Print text in console?
+    --#
+    out_to_ncurses = false,
+    out_to_stderr = false,
+    out_to_console = false,
+
+    --####
+    --## Text alignment.
+    --#
+    alignment = 'top_right',
+
+    --####
+    --## Minimum size of the text area.
+    --#
+    minimum_width = 250,
+    minimum_height = 5,
+
+    --####
+    --## Maximum width of the text area.
+    --#
+    maximum_width = 250,
+
+    --####
+    --## Gap between text and screen borders.
+    --#
+    gap_x = 20,  --# Left/Right
+    gap_y = 20, --# Top/Bottom
+
+    --####
+    --## Shorten MiB/GiB to M/G in stats.
+    --#
+    short_units = true,
+
+    --####
+    --## Pad % symbol spacing after numbers.
+    --#
+    pad_percents = 0,
+
+    --####
+    --## Pad spacing between text and borders.
+    --#
+    border_inner_margin = 10,
+    
+    --####
+    --## Limit the length of names in "Top Processes".
+    --#
+    top_name_width = 10,
+    
+    --####
+    --## Subtract file system -/+buffers/cache from used memory?
+    --## Set to true, to produce meaningful physical memory stats.
+    --#
+    no_buffers = true,
+
+    --####
+    --## Set to true, if you want all text to be in UPPERCASE.
+    --#
+    uppercase = false,
+
+    --####
+    --## Number of cpu samples to average.
+    --## Set to 1 to disable averaging.
+    --#
+    cpu_avg_samples = 2,
+
+    --####
+    --## Number of net samples to average.
+    --## Set to 1 to disable averaging.
+    --#
+    net_avg_samples = 2,
+
+    --####
+    --## Add spaces to keep things from moving around?
+    --## Only affects certain objects.
+    --#
+    use_spacer = 'right',
+
+    --####
+    --## My colors (suit yourself)
+    --#
+    color1 = 'FF4500',
+    color1 = 'FF4500',
+    color2 = 'BD1810',
+    color3 = 'ivory3',			--#CDCDC1
+    color4 = 'ffcc66',			--#FFCC66
+    color5 = 'ivory3',			--#CDCDC1
+    color6 = 'gray',			--#BEBEBE
+    color7 = 'antiquewhite4',	--#8B8378
+    color8 = 'dimgray',			--#696969
+    color9 = 'tomato',			--#FF6347
+
+
+    --####
+    --## Load Lua for bargraphs (required)
+    --## Set the path to your script here.
+    --#
+    lua_load = '~/.conky/bargraph_small.lua',
+    lua_draw_hook_post = 'main_bars'
+  
+}
+
+conky.text = [[
+${image /home/skm/.conky/logo.png -p 25,2}${voffset 30}${alignc}Conky ${conky_version}${font}${voffset -5}
+##################################
+##            SYSTEM            ##
+##################################
+${voffset 10}${color1}SYSTEM${offset 8}${color1}${voffset -2}${hr 1}${font}
+${voffset 10}${font OpenLogos:size=10}${color1}u${voffset -4}${font}${color}${offset 5}${execpi 1800 lsb_release -sd | sed -e 's/Ubuntu/Ubuntu/g' -e 's/development/dev/g'}${alignr}${execpi 1800 lsb_release -sr}${font}
+# ${voffset 4}${font OpenLogos:size=10}${color1}u${voffset -4}${color}${offset 5}${execpi 1800 lsb_release -sd}${alignr}32 Bit${font}
+${voffset 0}${offset -2}${font OpenLogos:size=12}${color1}Z${voffset -4}${font}${color}${offset 3}${sysname}${offset 3}${kernel}${alignr}${font}${machine}${font}
+####
+## Uncomment for CPU ID / CPU Temp / CPU frequency (hybrid)
+${voffset 2}${font StyleBats:size=10}${color1}A${voffset -1}${font}${color}${offset 5}${execi 1000 cat /proc/cpuinfo | grep 'model name' | sed -e 's/model name.*: //'| uniq | cut -c 1-26}${offset 3}(${offset 2}${execpi 2 sensors | grep 'Package id 0:' | cut -c 17-18}°${offset 1})${alignr 1}${font}${freq_g cpu0}${offset 1}GHz${font}
+####
+## Uncomment for System Uptime (hybdid)
+${voffset 3}${font StyleBats:size=10}${color1}q${voffset -3}${font}${color}${offset 5}System${offset 3}Uptime${voffset -1}${alignr}${font}${uptime_short}${font}
+##################################
+##          PROCESSORS          ##
+##################################
+${voffset 10}${color1}PROCESSORS${offset 8}${color6}${voffset -2}${color1}${hr 1}${voffset 4}${color}${font}
+${voffset 10}${font StyleBats:size=9.9}${color1}${voffset 1}k${voffset -1}${font}${color3}${offset 2}CPU1${offset 5}${cpu cpu1}%${goto 137}${font StyleBats:size=9.9}${color1}${voffset 1}k${voffset -1}${offset 2}${font}${color}CPU2${offset 5}${cpu cpu2}%
+${font StyleBats:size=9.9}${color1}${voffset 2}k${voffset -2}${font}${color3}${offset 2}CPU3${offset 5}${cpu cpu3}%${goto 137}${font StyleBats:size=9.9}${color1}${voffset 2}k${voffset -1}${offset 2}${font}${color}CPU4${offset 5}${cpu cpu4}%${font}
+##################################
+##            MEMORY            ##
+##################################
+${voffset 10}${color1}MEMORY${offset 8}${voffset -2}${hr 1}${font}
+${voffset 10}${font StyleBats:size=10}${color1}l${font}${voffset -2}${color3}${offset 3}RAM${goto 97}${mem}${goto 133}/${offset 5}${memmax}${alignr}${memperc}%${font}
+##################################
+##             HDD              ##
+##################################
+${voffset 18}${font}${color1}HDD${offset 8}${color1}${voffset -2}${hr 1}${font}
+${voffset 10}${font StyleBats:size=9.9}${color1}x${voffset -2}${font}${color}${offset 4}ROOT${goto 95}${fs_used /}${goto 133}/${offset 5}${fs_size /}${alignr}${fs_free_perc /}%${font}
+${voffset 16}${font StyleBats:size=9.9}${color1}4${voffset -2}${font}${color}${offset 4}SWAP${goto 95}${font}${swap}${goto 133}/${offset 5}${swapmax}${alignr}${swapperc}%${font}
+##################################
+##         TOP PROCESSES        ##
+##################################
+${voffset 18}${font}${color1}TOP PROCESSES${offset 8}${color1}${voffset -2}${hr 1}${font}
+${voffset 10}${font StyleBats:size=10}${color1}h${voffset -4}${font}${color}${offset 5}${top_mem name 1}${goto 120}${font}${top_mem mem_res 1}${alignr}${top_mem mem 1}%${font}
+${voffset 1}${font StyleBats:size=10}${color1}h${voffset -4}${font}${color}${offset 5}${top_mem name 2}${goto 120}${font}${top_mem mem_res 2}${alignr}${top_mem mem 2}%${font}
+${voffset 1}${font StyleBats:size=10}${color1}h${voffset -4}${font}${color}${offset 5}${top_mem name 3}${goto 120}${font}${top_mem mem_res 3}${alignr}${top_mem mem 3}%${font}
+${voffset 1}${font StyleBats:size=10}${color1}h${voffset -4}${font}${color}${offset 5}${top_mem name 4}${goto 120}${font}${top_mem mem_res 4}${alignr}${top_mem mem 4}%${font}
+${voffset 1}${font StyleBats:size=10}${color1}h${voffset -4}${font}${color}${offset 5}${top_mem name 5}${goto 120}${font}${top_mem mem_res 5}${alignr}${top_mem mem 5}%${font}
+${voffset 1}${font StyleBats:size=10}${color1}h${voffset -4}${font}${color}${offset 5}${top_mem name 6}${goto 120}${font}${top_mem mem_res 6}${alignr}${top_mem mem 6}%${font}
+##################################
+##   NETWORK - AUTO DETECTION   ##
+##################################
+###
+## Change all instances of WLAN0/ETH0 to WLAN1/ETH1 etc.
+## as needed, depending on your rig (in several places)
+#
+## WIRED/ETHERNET SECTION ##
+${if_existing /proc/net/route enp0s31f6}
+${voffset 0}${font}${color1}WIRED NET${offset 8}${voffset -2}${hr 1}${font}
+${voffset 10}${font PizzaDudeBullets:size=9.5}${color}T${voffset -2}${font}${color}${offset 5}Download${goto 120}${font}${totaldown enp0s31f6}${alignr}${font}${downspeed enp0s31f6}${font}
+${voffset 0}${font PizzaDudeBullets:size=9.5}${color}N${voffset -2}${font}${color}${offset 5}Upload${goto 120}${font}${totalup enp0s31f6}${alignr}${font}${upspeed enp0s31f6}${font}
+${voffset 4}${font PizzaDudeBullets:size=9.5}${color}a${voffset -1}${font}${color}${offset 5}Internal${offset 3}IP${alignr}${font}${addr enp0s31f6}${font}${endif}
+#
+## WIRELESS/WIFI SECTION ##
+${if_existing /proc/net/route wlp58s0}
+${voffset 0}${font}${color1}WIFI NET${offset 8}${voffset -2}${hr 1}${font}
+${voffset 10}${font PizzaDudeBullets:size=9.5}${color}T${font}${color}${offset 5}Download${goto 120}${font}${totaldown wlp58s0}${alignr}${font}${downspeed wlp58s0}${font}
+${voffset 0}${font PizzaDudeBullets:size=9.5}${color}N${font}${color}${offset 5}Upload${goto 120}${font}${totalup wlp58s0}${alignr}${font}${upspeed wlp58s0}${font}
+${voffset 4}${font PizzaDudeBullets:size=9.5}${color}a${font}${color}${offset 5}Internal${offset 3}IP${alignr}${font}${addr wlp58s0}${font}${endif}
+#
+## WORK VPN SECTION ##
+${if_existing /proc/net/route tun0}
+${voffset 0}${font}${color1}WORK VPN NET${offset 8}${voffset -2}${hr 1}${font}
+${voffset 10}${font PizzaDudeBullets:size=9.5}${color}T${font}${color}${offset 5}Download${goto 120}${font}${totaldown tun0}${alignr}${font}${downspeed tun0}${font}
+${voffset 0}${font PizzaDudeBullets:size=9.5}${color}N${font}${color}${offset 5}Upload${goto 120}${font}${totalup tun0}${alignr}${font}${upspeed tun0}${font}
+${voffset 4}${font PizzaDudeBullets:size=9.5}${color}a${font}${color}${offset 5}Internal${offset 3}IP${alignr}${font}${addr tun0}${font}${endif}
+##################################
+##           BATTERY            ##
+##################################
+${voffset 0}${font}${color1}BATTERY${offset 8}${voffset -2}${hr 1}${font}
+${voffset 10}${font RadioSpace:size=32}${alignc}${color}${battery_percent BAT0}%
+##################################
+##           TIME               ##
+##################################
+${voffset 0}${font}${color1}TIME${offset 8}${voffset -2}${hr 1}${font}
+${voffset 10}${font RadioSpace:size=32}${alignc}${color}${time %H:%M}
+]]
